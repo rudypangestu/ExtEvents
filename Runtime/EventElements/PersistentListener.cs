@@ -1,4 +1,4 @@
-﻿namespace ExtEvents
+namespace ExtEvents
 {
     using System;
     using System.Collections.Generic;
@@ -199,7 +199,7 @@
                 return;
             }
 
-            _initializationSuccessful = Initialize();
+            Initialize();
 
             if (_initializationSuccessful)
                 InvokeImpl(args);
@@ -249,6 +249,7 @@
             InitializeArguments();
 
             _initializationComplete = true;
+            _initializationSuccessful = true;
             return true;
         }
 
